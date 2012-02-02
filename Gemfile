@@ -37,3 +37,6 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 gem 'cucumber'
+gem 'capybara'
+gem 'gizmo'
+gem 'rspec'
