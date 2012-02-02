@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :sex %><br />
-    <%= f.text_field :sex %>
+    <%= f.select :sex, ['男', '女'], :include_blank=>"--select--"%>
   </div>
   <div class="field">
     <%= f.label :school %><br />
@@ -37,8 +37,8 @@
   </div>
   <div class="field">
     <%= f.label :graduate_year %><br />
-    <%= f.select :graduate_year, ['2009', '2010', '2011'] %>
-    <%= f.select :graduate_month, ['01','02','03','04','05','06','07','08','09','10','11','12'] %>
+    <%= f.select :graduate_year, ['2009', '2010', '2011', '2012'], :include_blank=>"--select--" %>
+    <%= f.select :graduate_month, ['01','02','03','04','05','06','07','08','09','10','11','12'], :include_blank => "--select--"%>
   </div>
   <div class="field">
     <%= f.label :email %><br />

@@ -2,12 +2,12 @@ module PageWithCandidates
   include Gizmo::PageMixin
 
   def valid?
-    has_s1elector?("#candidates")
+    has_selector?("#candidates")
   end
 
 
   def has_candidate? candidate
-    has_content?(candidate[:cellphone]) && has_content?(candidate[:email])
+    has_css?('tr', :text => candidate[:cellphone]) && has_css?('tr', :text => candidate[:email])
   end
 
 end
