@@ -7,7 +7,7 @@ class CreateCandidates < ActiveRecord::Migration
       t.string :sex
       t.string :school
       t.string :major
-      t.date :gradute_at
+      t.date :graduate_at
       t.string :email
       t.string :summary
 
