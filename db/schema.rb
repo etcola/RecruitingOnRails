@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120202035419) do
+ActiveRecord::Schema.define(:version => 20120202140523) do
 
   create_table "candidates", :force => true do |t|
     t.string   "cellphone"
@@ -19,11 +19,12 @@ ActiveRecord::Schema.define(:version => 20120202035419) do
     t.string   "sex"
     t.string   "school"
     t.string   "major"
-    t.date     "gradute_at"
     t.string   "email"
     t.string   "summary"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.string   "graduate_year"
+    t.string   "graduate_month"
   end
 
 end
