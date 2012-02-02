@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-RailsOnRecruting::Application.load_tasks
+RecrutingOnRails::Application.load_tasks
