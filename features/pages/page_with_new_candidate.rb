@@ -22,13 +22,13 @@ module PageWithNewCandidate
       form.container = find("#new_candidate")
       container = form.container
       form.cellphone = container.find('#candidate_cellphone')
-      form.cellphone = container.find('#candidate_name')
-      form.cellphone = container.find('#candidate_sex')
-      form.cellphone = container.find('#candidate_school')
-      form.cellphone = container.find('#candidate_major')
-      form.cellphone = container.find('#candidate_gradute_year')
-      form.cellphone = container.find('#candidate_gradute_month')
-      form.cellphone = container.find('#candidate_gradute_email')
+      form.name = container.find('#candidate_name')
+      form.sex = container.find('#candidate_sex')
+      form.school = container.find('#candidate_school')
+      form.major = container.find('#candidate_major')
+      form.graduate_year = container.find('#candidate_graduate_year')
+      form.graduate_month = container.find('#candidate_graduate_month')
+      form.email = container.find('#candidate_email')
     end
   end
 
