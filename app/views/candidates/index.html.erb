@@ -1,0 +1,39 @@
+<h1>Listing candidates</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Cellphone</th>
+    <th>Name</th>
+    <th>Sex</th>
+    <th>School</th>
+    <th>Major</th>
+    <th>Gradute at</th>
+    <th>Email</th>
+    <th>Summary</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @candidates.each do |candidate| %>
+  <tr>
+    <td><%= candidate.id %></td>
+    <td><%= candidate.cellphone %></td>
+    <td><%= candidate.name %></td>
+    <td><%= candidate.sex %></td>
+    <td><%= candidate.school %></td>
+    <td><%= candidate.major %></td>
+    <td><%= candidate.gradute_at %></td>
+    <td><%= candidate.email %></td>
+    <td><%= candidate.summary %></td>
+    <td><%= link_to 'Show', candidate %></td>
+    <td><%= link_to 'Edit', edit_candidate_path(candidate) %></td>
+    <td><%= link_to 'Destroy', candidate, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Candidate', new_candidate_path %>
