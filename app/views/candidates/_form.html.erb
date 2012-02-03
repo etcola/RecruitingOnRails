@@ -22,7 +22,7 @@
     <div class="field">
       <%= f.label :cellphone, "手机号码" %>
       <br/>
-      <%= f.text_field :cellphone %>
+      <%= f.text_field :cellphone, :placeholder => "输入格式：13912345678"%>
       <label class="tips">手机号码输入格式：13912345678</label>
     </div>
     <div class="field">
@@ -33,7 +33,7 @@
     <div class="field">
       <%= f.label :college, "毕业院校" %>
       <br/>
-      <%= f.text_field :college %>
+      <%= f.text_field :college, :placeholder => "全称，如：西安电子科技大学" %>
       <label class="tips">请输入学校全称，如：西安电子科技大学</label>
     </div>
     <div class="field">
@@ -50,7 +50,8 @@
     <div class="field">
       <%= f.label :email, "电子邮箱" %>
       <br/>
-      <%= f.text_field :email %>
+      <%= f.text_field :email%>
+      <br/>
       <label class="tips">我们会向您的邮箱发送确认邮件及后续通知邮件</label>
     </div>
     <div class="field">
