@@ -1,4 +1,4 @@
-<%= form_for(@candidate) do |f| %>
+<%= form_for(@candidate, :html => {:multipart => true}) do |f| %>
     <% if @candidate.errors.any? %>
         <div id="error_explanation">
           <h2>亲，出错了哟～</h2>
@@ -50,7 +50,7 @@
     <div class="field">
       <%= f.label :email, "电子邮箱" %>
       <br/>
-      <%= f.text_field :email%>
+      <%= f.text_field :email %>
       <br/>
       <label class="tips">我们会向您的邮箱发送确认邮件及后续通知邮件</label>
     </div>
@@ -67,7 +67,7 @@
     <div class="field">
       <%= f.label :track_source, "招聘信息来源" %>
       <br/>
-      <%= f.select :track_source, ['同学介绍', '宣讲会','学校BBS','招聘网站','微博/博客','其他'], :include_blank => default_select_text %>
+      <%= f.select :track_source, ['同学介绍', '宣讲会', '学校BBS', '招聘网站', '微博/博客', '其他'], :include_blank => default_select_text %>
     </div>
     <div class="field">
       <%= f.label :summary, "简历附件" %>
