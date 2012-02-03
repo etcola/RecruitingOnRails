@@ -11,42 +11,41 @@
     </div>
   <% end %>
 
-  <div class="field" style="display: none;">
-    <%= f.label :id %><br />
-    <%= f.number_field :id %>
+  <div class="field">
+    <%= f.hidden_field :id %>
   </div>
   <div class="field">
-    <%= f.label :cellphone %><br />
+    <%= f.label :cellphone, "手机号码" %><br />
     <%= f.text_field :cellphone %>
   </div>
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name, "姓名"%><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :sex %><br />
+    <%= f.label :sex , "性别"%><br />
     <%= f.select :sex, ['男', '女'], :include_blank=>"--select--"%>
   </div>
   <div class="field">
-    <%= f.label :school %><br />
+    <%= f.label :school, "毕业院校" %><br />
     <%= f.text_field :school %>
   </div>
   <div class="field">
-    <%= f.label :major %><br />
+    <%= f.label :major, "专业"  %><br />
     <%= f.text_field :major %>
   </div>
   <div class="field">
-    <%= f.label :graduate_year %><br />
+    <%= f.label :graduate_year, "毕业年月"  %><br />
     <%= f.select :graduate_year, ['2009', '2010', '2011', '2012'], :include_blank=>"--select--" %>
     <%= f.select :graduate_month, ['01','02','03','04','05','06','07','08','09','10','11','12'], :include_blank => "--select--"%>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email, "电子邮箱"  %><br />
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :summary %><br />
-    <%= f.text_field :summary %>
+    <%= f.label :summary, "简历附件"  %><br />
+    <%= f.file_field(:summary, :class => 'file_input') %>
   </div>
   <div class="actions">
     <%= f.submit %>
