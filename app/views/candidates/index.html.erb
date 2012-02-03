@@ -6,10 +6,13 @@
     <th>Cellphone</th>
     <th>Name</th>
     <th>Sex</th>
-    <th>School</th>
+    <th>College</th>
     <th>Major</th>
     <th>Graduate at</th>
     <th>Email</th>
+    <th>Degree</th>
+    <th>JobTitle</th>
+    <th>TrackSource</th>
     <th>Summary</th>
     <th></th>
     <th></th>
@@ -22,10 +25,13 @@
     <td><%= candidate.cellphone %></td>
     <td><%= candidate.name %></td>
     <td><%= candidate.sex %></td>
-    <td><%= candidate.school %></td>
+    <td><%= candidate.college %></td>
     <td><%= candidate.major %></td>
     <td><%= candidate.graduate_year %><%= candidate.graduate_month %></td>
     <td><%= candidate.email %></td>
+    <td><%= candidate.degree %></td>
+    <td><%= candidate.job_title %></td>
+    <td><%= candidate.track_source %></td>
     <td><%= candidate.summary %></td>
     <td><%= link_to 'Show', candidate %></td>
     <td><%= link_to 'Edit', edit_candidate_path(candidate) %></td>

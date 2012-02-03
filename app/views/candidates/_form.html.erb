@@ -30,9 +30,9 @@
       <%= f.select :sex, ['男', '女'], :include_blank => default_select_text %>
     </div>
     <div class="field">
-      <%= f.label :school, "毕业院校" %>
+      <%= f.label :college, "毕业院校" %>
       <br/>
-      <%= f.text_field :school %>
+      <%= f.text_field :college %>
     </div>
     <div class="field">
       <%= f.label :major, "专业" %>
@@ -49,6 +49,21 @@
       <%= f.label :email, "电子邮箱" %>
       <br/>
       <%= f.text_field :email %>
+    </div>
+    <div class="field">
+      <%= f.label :degree, "学位" %>
+      <br/>
+      <%= f.select :degree, ['学士', '硕士', '博士', '其他'], :include_blank => default_select_text %>
+    </div>
+    <div class="field">
+      <%= f.label :job_title, "应聘职位" %>
+      <br/>
+      <%= f.select :job_title, ['应用软件开发工程师', '质量保证工程师'], :include_blank => default_select_text %>
+    </div>
+    <div class="field">
+      <%= f.label :track_source, "招聘信息来源" %>
+      <br/>
+      <%= f.select :track_source, ['同学介绍', '宣讲会','学校BBS','招聘网站','微博/博客','其他'], :include_blank => default_select_text %>
     </div>
     <div class="field">
       <%= f.label :summary, "简历附件" %>
