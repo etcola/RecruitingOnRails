@@ -4,7 +4,8 @@ class Candidate < ActiveRecord::Base
 
   validates_presence_of :cellphone, :message => "手机号码不能为空"
   validates_numericality_of :cellphone, :message => "手机号码包含非数字", :unless => :error_for_cellphone?
-  validates_uniqueness_of :cellphone, :message => "手机号码已存在", :unless => :error_for_cellphone?
+  validates_uniqueness_of :cellphone, :scope => :email, :message => "手机号码已存在", :unless => :error_for_cellphone?
+  validates_uniqueness_of :email, :scope => :cellphone, :message => "邮箱地址已存在", :unless => :error_for_email?
   validates_length_of :cellphone, :is=>11, :message => "手机号码长度不是11位", :unless => :error_for_cellphone?
 
   validates_presence_of :sex, :message => "性别不能为空"
