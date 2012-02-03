@@ -13,7 +13,7 @@ class CreateCandidates < ActiveRecord::Migration
       t.string :degree
       t.string :job_title
       t.string :track_source
-      t.string :summary
+      t.string :resume
 
       t.timestamps
     end

@@ -70,9 +70,9 @@
       <%= f.select :track_source, ['同学介绍', '宣讲会', '学校BBS', '招聘网站', '微博/博客', '其他'], :include_blank => default_select_text %>
     </div>
     <div class="field">
-      <%= f.label :summary, "简历附件" %>
+      <%= f.label :resume, "简历附件" %>
       <br/>
-      <%= f.file_field(:summary, :class => 'file_input') %>
+      <%= f.file_field(:resume, :class => 'file_input') %>
     </div>
     <div class="actions">
       <%= f.submit :value=>"提交" %>

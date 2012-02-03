@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(:version => 20120202035419) do
     t.string   "degree"
     t.string   "job_title"
     t.string   "track_source"
-    t.string   "summary"
+    t.string   "resume"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
   end

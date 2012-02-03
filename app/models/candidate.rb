@@ -21,9 +21,9 @@ class Candidate < ActiveRecord::Base
   validates_presence_of :job_title, :message => "应聘职位不能为空"
   validates_presence_of :track_source, :message => "信息来源不能为空"
 
-  validates_presence_of :summary, :message => "请指定要上传的简历"
+  validates_presence_of :resume, :message => "请指定要上传的简历"
 
-  mount_uploader :summary, ResumeUploader
+  mount_uploader :resume, ResumeUploader
 
   private
 
