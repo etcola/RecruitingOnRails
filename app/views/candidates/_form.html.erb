@@ -1,53 +1,61 @@
 <%= form_for(@candidate) do |f| %>
-  <% if @candidate.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@candidate.errors.count, "error") %> prohibited this candidate from being saved:</h2>
+    <% if @candidate.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@candidate.errors.count, "error") %> prohibited this candidate from being saved:</h2>
 
-      <ul>
-      <% @candidate.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% @candidate.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <% default_select_text= "--请选择--" %>
+    <div class="field">
+      <%= f.hidden_field :id %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.hidden_field :id %>
-  </div>
-  <div class="field">
-    <%= f.label :cellphone, "手机号码" %><br />
-    <%= f.text_field :cellphone %>
-  </div>
-  <div class="field">
-    <%= f.label :name, "姓名"%><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :sex , "性别"%><br />
-    <%= f.select :sex, ['男', '女'], :include_blank=>"--select--"%>
-  </div>
-  <div class="field">
-    <%= f.label :school, "毕业院校" %><br />
-    <%= f.text_field :school %>
-  </div>
-  <div class="field">
-    <%= f.label :major, "专业"  %><br />
-    <%= f.text_field :major %>
-  </div>
-  <div class="field">
-    <%= f.label :graduate_year, "毕业年月"  %><br />
-    <%= f.select :graduate_year, ['2009', '2010', '2011', '2012'], :include_blank=>"--select--" %>
-    <%= f.select :graduate_month, ['01','02','03','04','05','06','07','08','09','10','11','12'], :include_blank => "--select--"%>
-  </div>
-  <div class="field">
-    <%= f.label :email, "电子邮箱"  %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :summary, "简历附件"  %><br />
-    <%= f.file_field(:summary, :class => 'file_input') %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="field">
+      <%= f.label :cellphone, "手机号码" %>
+      <br/>
+      <%= f.text_field :cellphone %>
+    </div>
+    <div class="field">
+      <%= f.label :name, "姓名" %>
+      <br/>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :sex, "性别" %>
+      <br/>
+      <%= f.select :sex, ['男', '女'], :include_blank => default_select_text %>
+    </div>
+    <div class="field">
+      <%= f.label :school, "毕业院校" %>
+      <br/>
+      <%= f.text_field :school %>
+    </div>
+    <div class="field">
+      <%= f.label :major, "专业" %>
+      <br/>
+      <%= f.text_field :major %>
+    </div>
+    <div class="field">
+      <%= f.label :graduate_year, "毕业年月" %>
+      <br/>
+      <%= f.select :graduate_year, ['2009', '2010', '2011', '2012'], :include_blank => default_select_text %>
+      <%= f.select :graduate_month, ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'], :include_blank => default_select_text %>
+    </div>
+    <div class="field">
+      <%= f.label :email, "电子邮箱" %>
+      <br/>
+      <%= f.text_field :email %>
+    </div>
+    <div class="field">
+      <%= f.label :summary, "简历附件" %>
+      <br/>
+      <%= f.file_field(:summary, :class => 'file_input') %>
+    </div>
+    <div class="actions">
+      <%= f.submit :value=>"提交" %>
+    </div>
 <% end %>
