@@ -7,7 +7,7 @@ module PageWithNewCandidate
   end
 
   define_action :submit_resume do |candidate|
-    new_candidate_form.cellphone.set(candidate[:cellphone])
+    new_candidate_form.cellphone.set(candidate[:cell_phone])
     new_candidate_form.name.set(candidate[:name])
     new_candidate_form.sex.select(candidate[:sex])
     new_candidate_form.school.set(candidate[:school])
