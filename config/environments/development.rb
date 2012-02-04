@@ -10,11 +10,25 @@ RecrutingOnRails::Application.configure do
   config.whiny_nils = true
 
   # Show full error reports and disable caching
-  config.consider_all_requests_local       = true
+  config.consider_all_requests_local = true
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
+
+# set delivery method to :smtp, :sendmail or :test
+  config.action_mailer.delivery_method = :smtp
+
+# these options are only needed if you choose smtp delivery
+  config.action_mailer.smtp_settings = {
+      :address => "smtp.gmail.com",
+      :port => 587,
+      :domain => "www.ThoughtWorks.com",
+      :user_name => "recruiter.thoughtworks@gmail.com",
+      :password => "r0ys1ngh4m",
+      :authentication => "plain",
+      :enable_starttls_auto => true
+  }
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
@@ -34,5 +48,7 @@ RecrutingOnRails::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  #registrate observer
   config.active_record.observers = :candidate_observer
 end

@@ -2,7 +2,6 @@ class CandidateObserver < ActiveRecord::Observer
   observe :candidate
 
   def after_create(candidate)
-    puts "After creation"
-    puts candidate.inspect
+    CandidateMailer.registration_confirmation(candidate).deliver
   end
 end
