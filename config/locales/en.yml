@@ -7,4 +7,5 @@ en:
   errors:
     messages:
       size_too_big: "简历大小超过2M"
+      #you need delete 'extension_white_list_error' in /carrierwave-0.5.8/lib/carrierwave/locale/en.yml
       extension_white_list_error: "文件格式错误，应为%{allowed_types}"
