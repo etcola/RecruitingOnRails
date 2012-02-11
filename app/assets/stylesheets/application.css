@@ -11,3 +11,11 @@
  *= require_self
  *= require_tree .
 */
+fieldset label {
+  width: 20%;
+  float: left;
+}
+
+fieldset label.tips {
+  float: none;
+}
