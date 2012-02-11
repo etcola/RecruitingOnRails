@@ -1,4 +1,4 @@
-RecrutingOnRails::Application.routes.draw do
+RecruitingOnRails::Application.routes.draw do
   resources :candidates
 
   # The priority is based upon order of creation:
