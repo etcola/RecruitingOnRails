@@ -120,6 +120,10 @@ table tr:nth-child(even) {
   background: #eee;
 }
 
+.actions {
+  margin-top: 5px;
+}
+
 .button {
   background-color: #7fbf4d;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7fbf4d), color-stop(100%, #63a62f));
@@ -132,7 +136,8 @@ table tr:nth-child(even) {
   border-radius: 6px;
   box-shadow: inset 0 1px 0 0 #96ca6d;
   color: #fff;
-  padding: 1px 20px;
+  padding: 0 20px;
+  height: 28px;
   text-align: center;
   text-shadow: 0 -1px 0 #4c9021;
   text-decoration: none;
@@ -141,18 +146,14 @@ table tr:nth-child(even) {
 }
 
 a.button {
-  line-height: 50px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
 }
 
 .button:active {
   border: 1px solid #5b992b;
   border-bottom: 1px solid #538c27;
-  -webkit-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
-  -moz-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
-  -ms-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
-  -o-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
   box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
 }
 
