@@ -167,3 +167,21 @@ a.button {
   box-shadow: inset 0 1px 0 0 #8dbf67;
   cursor: pointer;
 }
+
+ol {
+  width: 25%;
+}
+
+ol li {
+  padding: 4px 8px;
+}
+
+ol li span {
+  float: right;
+  color: #bbb;
+}
+
+ol li:hover {
+  background: #f0f0f0;
+  border-radius: 4px;
+}

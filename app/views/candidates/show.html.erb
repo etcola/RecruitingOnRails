@@ -1,66 +1,64 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Id:</b>
-  <%= @candidate.id %>
-</p>
+<ol>
+  <li>
+    <b>Cellphone:</b>
+    <span><%= @candidate.cellphone %></span>
+  </li>
 
-<p>
-  <b>Cellphone:</b>
-  <%= @candidate.cellphone %>
-</p>
+  <li>
+    <b>Name:</b>
+    <span><%= @candidate.name %></span>
+  </li>
 
-<p>
-  <b>Name:</b>
-  <%= @candidate.name %>
-</p>
+  <li>
+    <b>Sex:</b>
+    <span><%= @candidate.sex %></span>
+  </li>
 
-<p>
-  <b>Sex:</b>
-  <%= @candidate.sex %>
-</p>
+  <li>
+    <b>College:</b>
+    <span><%= @candidate.college %></span>
+  </li>
 
-<p>
-  <b>College:</b>
-  <%= @candidate.college %>
-</p>
+  <li>
+    <b>Major:</b>
+    <span><%= @candidate.major %></span>
+  </li>
 
-<p>
-  <b>Major:</b>
-  <%= @candidate.major %>
-</p>
+  <li>
+    <b>Graduate at:</b>
+    <span><%= @candidate.graduate_year %></span>
+    <span><%= @candidate.graduate_month %></span>
+  </li>
 
-<p>
-  <b>Graduate at:</b>
-  <%= @candidate.graduate_year %>
-  <%= @candidate.graduate_month %>
-</p>
+  <li>
+    <b>Email:</b>
+    <span><%= @candidate.email %></span>
+  </li>
 
-<p>
-  <b>Email:</b>
-  <%= @candidate.email %>
-</p>
+  <li>
+    <b>Degree:</b>
+    <span><%= @candidate.degree %></span>
+  </li>
 
-<p>
-  <b>Degree:</b>
-  <%= @candidate.degree %>
-</p>
+  <li>
+    <b>JobTitle:</b>
+    <span><%= @candidate.job_title %></span>
+  </li>
 
-<p>
-  <b>JobTitle:</b>
-  <%= @candidate.job_title %>
-</p>
+  <li>
+    <b>TrackSource:</b>
+    <span><%= @candidate.track_source %></span>
+  </li>
 
-<p>
-  <b>TrackSource:</b>
-  <%= @candidate.track_source %>
-</p>
+  <li>
+    <b>Resume:</b>
+    <span><%= @candidate.resume %></span>
+  </li>
+</ol>
 
-<p>
-  <b>Resume:</b>
-  <%= @candidate.resume %>
-</p>
-
-
-<%= link_to 'Edit', edit_candidate_path(@candidate) %> |
-<%= link_to 'Back', candidates_path %>
+<div class="actions">
+  <%= link_to 'Edit', edit_candidate_path(@candidate), :class => "button" %>
+  <%= link_to 'Back', candidates_path, :class => "button" %>
+</div>
