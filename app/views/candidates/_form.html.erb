@@ -1,68 +1,67 @@
 <%= form_for(@candidate, :html => {:multipart => true}) do |f| %>
-    <% if @candidate.errors.any? %>
-        <div id="error_explanation">
-          <h2>亲，出错了哟～</h2>
-          <ul>
-            <% @candidate.errors.messages.each do |msg| %>
-                <li><%= msg[1].first %>
-                </li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
     <% default_select_text= "--请选择--" %>
-    <div>
-      <%= f.hidden_field :id %>
-    </div>
+    <%= f.hidden_field :id %>
     <fieldset>
-      <%= f.label :name, "姓名" %>
-      <%= f.text_field :name  %>
+        <%= f.label :name, "姓名" %>
+        <%= f.text_field :name %>
+        <span class="error-message"><%= @candidate.errors['name'].first %></span>
     </fieldset>
     <fieldset>
-      <%= f.label :cellphone, "手机号码" %>
-      <%= f.text_field :cellphone %>
-      <p>手机号码输入格式：13912345678</p>
+        <%= f.label :cellphone, "手机号码" %>
+        <%= f.text_field :cellphone %>
+        <span class="error-message"><%= @candidate.errors['cellphone'].first %></span>
+        <p>手机号码输入格式：13912345678</p>
     </fieldset>
     <fieldset>
-      <%= f.label :sex, "性别" %>
-      <%= f.select :sex, ['男', '女'], :include_blank => default_select_text %>
+        <%= f.label :sex, "性别" %>
+        <%= f.select :sex, ['男', '女'], :include_blank => default_select_text %>
+        <span class="error-message"><%= @candidate.errors['sex'].first %></span>
     </fieldset>
     <fieldset>
-      <%= f.label :college, "毕业院校" %>
-      <%= f.text_field :college %>
-      <p>请输入学校全称，如：西安电子科技大学</p>
+        <%= f.label :college, "毕业院校" %>
+        <%= f.text_field :college %>
+        <span class="error-message"><%= @candidate.errors['college'].first %></span>
+        <p>请输入学校全称，如：西安电子科技大学</p>
     </fieldset>
     <fieldset>
-      <%= f.label :major, "专业" %>
-      <%= f.text_field :major %>
+        <%= f.label :major, "专业" %>
+        <%= f.text_field :major %>
+        <span class="error-message"><%= @candidate.errors['major'].first %></span>
     </fieldset>
     <fieldset>
-      <%= f.label :graduate_year, "毕业年月" %>
-      <%= f.select :graduate_year, ['2009', '2010', '2011', '2012'], :include_blank => default_select_text %>
-      <%= f.select :graduate_month, ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'], :include_blank => default_select_text %>
+        <%= f.label :graduate_year, "毕业年月" %>
+        <%= f.select :graduate_year, ['2009', '2010', '2011', '2012'], :include_blank => default_select_text %>
+        <%= f.select :graduate_month, ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'], :include_blank => default_select_text %>
+        <span class="error-message"><%= @candidate.errors['graduate_year'].first %></span>
+        <span class="error-message"><%= @candidate.errors['graduate_month'].first %></span>
     </fieldset>
     <fieldset>
-      <%= f.label :email, "电子邮箱" %>
-      <%= f.text_field :email %>
-      <p>我们会向您的邮箱发送确认邮件及后续通知邮件</p>
+        <%= f.label :email, "电子邮箱" %>
+        <%= f.text_field :email %>
+        <span class="error-message"><%= @candidate.errors['email'].first %></span>
+        <p>我们会向您的邮箱发送确认邮件及后续通知邮件</p>
     </fieldset>
     <fieldset>
-      <%= f.label :degree, "学位" %>
-      <%= f.select :degree, ['学士', '硕士', '博士', '其他'], :include_blank => default_select_text %>
+        <%= f.label :degree, "学位" %>
+        <%= f.select :degree, ['学士', '硕士', '博士', '其他'], :include_blank => default_select_text %>
+        <span class="error-message"><%= @candidate.errors['degree'].first %></span>
     </fieldset>
     <fieldset>
-      <%= f.label :job_title, "应聘职位" %>
-      <%= f.select :job_title, ['应用软件开发工程师', '质量保证工程师'], :include_blank => default_select_text %>
+        <%= f.label :job_title, "应聘职位" %>
+        <%= f.select :job_title, ['应用软件开发工程师', '质量保证工程师'], :include_blank => default_select_text %>
+        <span class="error-message"><%= @candidate.errors['job_title'].first %></span>
     </fieldset>
     <fieldset>
-      <%= f.label :track_source, "招聘信息来源" %>
-      <%= f.select :track_source, ['同学介绍', '宣讲会', '学校BBS', '招聘网站', '微博/博客', '其他'], :include_blank => default_select_text %>
+        <%= f.label :track_source, "招聘信息来源" %>
+        <%= f.select :track_source, ['同学介绍', '宣讲会', '学校BBS', '招聘网站', '微博/博客', '其他'], :include_blank => default_select_text %>
+        <span class="error-message"><%= @candidate.errors['track_source'].first %></span>
     </fieldset>
     <fieldset>
-      <%= f.label :resume, "简历附件" %>
-      <%= f.file_field(:resume, :class => 'file_input') %>
+        <%= f.label :resume, "简历附件" %>
+        <%= f.file_field(:resume, :class => 'file_input') %>
+        <span class="error-message"><%= @candidate.errors['resume'].first %></span>
     </fieldset>
     <div class="actions">
-      <%= f.submit :value=>"提交" %>
+        <%= f.submit :value=>"提交" %>
     </div>
 <% end %>

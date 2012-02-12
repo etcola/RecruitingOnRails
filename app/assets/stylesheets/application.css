@@ -34,11 +34,17 @@ h1 {
 
 form {
   margin: 0 auto;
+  margin-bottom: 10px;
   padding: 20px;
   width: 80%;
   background-color: white;
   border-radius: 0 0 15px 15px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
 }
 
 fieldset {
@@ -61,7 +67,6 @@ fieldset p {
 }
 
 fieldset input[type="text"] {
-  display: block;
   width: 50%;
   padding: 5px;
   font-size: 14px;
