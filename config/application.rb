@@ -58,15 +58,7 @@ module RecruitingOnRails
 
     #Overwrite the default view of error message in form
     config.action_view.field_error_proc = Proc.new do |html_tag, instance|
-      if html_tag.index '<label'
-        class_attr_index = html_tag.index 'class="'
-
-        if class_attr_index
-          html_tag.insert class_attr_index+7, 'error '
-        else
-          html_tag.insert html_tag.index('>'), ' class="error"'
-        end
-      end
+      html_tag.html_safe
     end
   end
 end

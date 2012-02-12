@@ -3,7 +3,7 @@
   <%= f.hidden_field :id %>
   <fieldset>
     <%= f.label :name, "姓名" %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :autofocus => "autofocus" %>
     <span class="error-message"><%= @candidate.errors['name'].first %></span>
   </fieldset>
   <fieldset>
