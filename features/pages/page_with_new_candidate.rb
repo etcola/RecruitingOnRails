@@ -18,6 +18,7 @@ module PageWithNewCandidate
     new_candidate_form.degree.select(candidate[:degree])
     new_candidate_form.job_title.select(candidate[:job_title])
     new_candidate_form.track_source.select(candidate[:track_source])
+    new_candidate_form.container.attach_file("candidate_resume", File.join(Dir.pwd, candidate[:resume]))
     new_candidate_form.submit.click
   end
 
@@ -36,6 +37,7 @@ module PageWithNewCandidate
       form.degree = container.find('#candidate_degree')
       form.job_title = container.find('#candidate_job_title')
       form.track_source = container.find('#candidate_track_source')
+      form.resume = container.find('#candidate_resume')
       form.submit = container.find('input[type=submit]')
     end
   end
