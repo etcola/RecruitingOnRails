@@ -1,25 +1,25 @@
 ## Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 #
-#one:
-#  id: 1
-#  cellphone: MyString
-#  name: MyString
-#  sex: MyString
-#  school: MyString
-#  major: MyString
-#  graduate_year: 2011
-#  graduate_month: 12
-#  email: MyString
-#  summary: MyString
-#
-#two:
-#  id: 1
-#  cellphone: MyString
-#  name: MyString
-#  sex: MyString
-#  school: MyString
-#  major: MyString
-#  graduate_year: 2011
-#  graduate_month: 12
-#  email: MyString
-#  summary: MyString
+one:
+  id: 1
+  cellphone: MyString
+  name: MyString
+  sex: MyString
+  college: MyString
+  major: MyString
+  graduate_year: 2011
+  graduate_month: 12
+  email: MyString
+  resume: MyString
+
+two:
+  id: 2
+  cellphone: MyString
+  name: MyString
+  sex: MyString
+  college: MyString
+  major: MyString
+  graduate_year: 2011
+  graduate_month: 12
+  email: MyString
+  resume: MyString
