@@ -45,3 +45,5 @@ gem 'mailhopper'
 gem 'delayed_mailhopper'
 gem 'delayed_job_active_record'
 gem 'mysql2'
+gem 'database_cleaner'
+gem "cucumber-rails", "~> 1.2.1"
