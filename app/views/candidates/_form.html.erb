@@ -62,6 +62,7 @@
   <fieldset>
     <%= f.label :resume, "简历附件" %>
     <%= f.file_field(:resume, :class => 'file_input') %>
+    <%= f.hidden_field(:resume_cache)%>
     <span class="error-message"><%= @candidate.errors['resume'].first %></span>
   </fieldset>
   <div class="actions">
