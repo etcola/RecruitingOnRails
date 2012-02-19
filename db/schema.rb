@@ -26,8 +26,19 @@ ActiveRecord::Schema.define(:version => 20120210153055) do
     t.string   "job_title"
     t.string   "track_source"
     t.string   "resume"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.integer  "lg_score",              :default => 0
+    t.integer  "lg_answered",           :default => 0
+    t.integer  "wl_score",              :default => 0
+    t.integer  "wl_answered",           :default => 0
+    t.string   "assignment_submitted",  :default => "否"
+    t.string   "hr_interview_group"
+    t.string   "hr_interview_result",   :default => "pass"
+    t.string   "team_interview_group"
+    t.string   "team_interview_result", :default => "pass"
+    t.string   "offer",                 :default => "否"
+    t.string   "comment"
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
   end
 
   create_table "delayed_jobs", :force => true do |t|

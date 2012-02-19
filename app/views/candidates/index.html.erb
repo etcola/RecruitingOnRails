@@ -6,17 +6,28 @@
   <table id="candidates">
     <tr>
       <th>Id</th>
-      <th>Cellphone</th>
-      <th>Name</th>
-      <th>Sex</th>
-      <th>College</th>
-      <th>Major</th>
-      <th>Graduate Date</th>
-      <th>Email</th>
-      <th>Degree</th>
-      <th>JobTitle</th>
-      <th>TrackSource</th>
-      <th colspan="4">Resume</th>
+      <th>电话</th>
+      <th>姓名</th>
+      <th>性别</th>
+      <th>毕业院校</th>
+      <th>专业</th>
+      <th>毕业时间</th>
+      <th>电子邮件</th>
+      <th>学位</th>
+      <th>应聘职位</th>
+      <th>消息来源</th>
+      <th>LG正确</th>
+      <th>LG答题</th>
+      <th>WL正确</th>
+      <th>WL答题</th>
+      <th>作业提交</th>
+      <th>HR面试分组</th>
+      <th>HR面试结果</th>
+      <th>小组面试分组</th>
+      <th>小组面试结果</th>
+      <th>Offer</th>
+      <th>备注</th>
+      <th colspan="4">简历链接</th>
     </tr>
 
     <% @candidates.each do |candidate| %>
@@ -32,6 +43,16 @@
         <td><%= candidate.degree %></td>
         <td><%= candidate.job_title %></td>
         <td><%= candidate.track_source %></td>
+        <td><%= candidate.lg_score %></td>
+        <td><%= candidate.lg_answered %></td>
+        <td><%= candidate.wl_score %></td>
+        <td><%= candidate.wl_answered %></td>
+        <td><%= candidate.hr_interview_group %></td>
+        <td><%= candidate.hr_interview_result %></td>
+        <td><%= candidate.team_interview_group %></td>
+        <td><%= candidate.team_interview_result %></td>
+        <td><%= candidate.offer %></td>
+        <td><%= candidate.comment %></td>
         <td><a href="<%= candidate.resume %>">Download</a></td>
         <td><%= link_to 'Show', candidate %></td>
         <td><%= link_to 'Edit', edit_candidate_path(candidate) %></td>
