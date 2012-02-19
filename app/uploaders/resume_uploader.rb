@@ -17,7 +17,10 @@ class ResumeUploader < CarrierWave::Uploader::Base
   end
 
   def filename
-    "#{model.cellphone}_#{original_filename}"
+    name = original_filename
+    dot_position = name.rindex(".")
+    extension = name[dot_position..-1]
+    "#{model.name}_#{model.cellphone}#{extension}"
   end
 
   def extension_white_list
