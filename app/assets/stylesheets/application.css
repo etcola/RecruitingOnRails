@@ -48,7 +48,7 @@ h1 {
 }
 
 form {
-  width: 100%;
+  /*width: 100%;*/
 }
 
 .error-message {
@@ -184,4 +184,13 @@ ol li span {
 ol li:hover {
   background: #f0f0f0;
   border-radius: 4px;
+}
+
+.picture {
+  margin-left: 20px;
+  float: right;
+}
+
+.picture:hover {
+  cursor: pointer;
 }
