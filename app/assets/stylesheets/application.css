@@ -109,39 +109,39 @@ table {
   margin-bottom: 15px;
 }
 
-table th {
+th {
   font-size: 16px;
 }
 
-table th,
-table td {
+th,
+td {
   padding: 5px;
   border-bottom: 1px solid #ccc;
 }
 
-table th {
+th {
   border-width: 2px;
 }
 
-table td, table td a {
+td, table a {
   color: #666;
 }
 
-table tr:last-child th,
-table tr:last-child td {
+tr:last-child th,
+tr:last-child td {
   border-bottom: none;
 }
 
-table tr:nth-child(even) {
+tr:nth-child(even) {
   background-color: #eee;
 }
 
-table tr:not(:first-child):hover {
+tr:not(:first-child):hover {
   background-color: #575D60;
 
 }
 
-table tr:not(:first-child):hover td, table tr:not(:first-child):hover a {
+tr:not(:first-child):hover td, tr:not(:first-child):hover a {
   color: white;
 }
 
