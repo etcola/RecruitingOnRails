@@ -23,6 +23,7 @@ body {
 }
 
 #content {
+  max-width: 1000px;
   width: 90%;
   margin: 2px auto 10px auto;
   padding: 20px;
@@ -63,19 +64,19 @@ fieldset {
 }
 
 fieldset label {
-  font-size: 18px;
-  width: 15%;
+  width: 100px;
   float: left;
+  font-size: 15px;
 }
 
 fieldset p {
-  margin-left: 15%;
+  margin-left: 100px;
   color: gray;
   margin-top: 5px;
 }
 
 fieldset input[type="text"] {
-  width: 50%;
+  width: 65%;
   padding: 5px;
   border: 1px solid #DDD;
   background: whiteSmoke;
