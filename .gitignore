@@ -16,4 +16,4 @@
 /public/uploads
 
 # Ignore all .idea files
-./idea/**
+.idea/**
