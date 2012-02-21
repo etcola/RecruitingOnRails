@@ -1,5 +1,5 @@
 Given /^candidate navigate to new candidate page$/ do
-  visit('candidates/new')
+  visit('/candidates/new')
 end
 
 When /^candidate submit his resume information$/ do
@@ -9,7 +9,7 @@ When /^candidate submit his resume information$/ do
 end
 
 Then /^I can see him on recruiter console$/ do
-  visit('candidates')
+  visit('/candidates')
   on_page_with(:candidates) do |page|
     page.should have_candidate(CandidateSupport::DEFAULT_CANDIDATE)
   end

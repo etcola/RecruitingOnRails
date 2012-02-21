@@ -17,12 +17,11 @@ require 'ostruct'
 # prefer to use XPath just remove this line and adjust any selectors in your
 # steps to use the XPath syntax.
 Capybara.run_server = true
-Capybara.default_driver = :selenium
+Capybara.default_driver = :rack_test
 Capybara.default_wait_time = 5
-Capybara.default_selector= :css
+Capybara.default_selector = :css
 Capybara::Selenium::Driver::DEFAULT_OPTIONS[:resynchronize] = false
 Capybara.ignore_hidden_elements = false
-Capybara.app_host = "http://localhost:3000/"
 
 
 # By default, any exception happening in your Rails application will bubble up

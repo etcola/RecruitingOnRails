@@ -36,14 +36,19 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
-gem 'cucumber'
-gem 'capybara'
-gem 'gizmo'
-gem 'rspec'
 gem 'carrierwave'
 gem 'mailhopper'
 gem 'delayed_mailhopper'
 gem 'delayed_job_active_record'
 gem 'mysql2'
 gem 'database_cleaner'
-gem "cucumber-rails", "~> 1.2.1"
+group :test do
+  gem "capybara"
+  gem 'database_cleaner'
+  gem 'cucumber-rails'
+  gem 'cucumber'
+  gem 'rspec-rails', '>= 2.0.0.beta.10'
+  gem 'spork'
+  gem 'launchy'    # So you can do Then show me the page
+  gem 'gizmo'
+end
