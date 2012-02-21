@@ -1,0 +1,6 @@
+Add what we should done and mark 'done' in end of item in list when it's done.
+
+1. change the url for creating candidate, and generate admin controller to list candidate.
+2. schedule a meeting for further requirement, evolve liu yao, zhang qun, suo qin, liu ying, liu yang, mao chao.
+3. prepare CI for our project.
+4. make a release plan.
