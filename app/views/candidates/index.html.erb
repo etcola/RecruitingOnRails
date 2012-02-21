@@ -2,65 +2,67 @@
   <h1>全部候选人</h1>
 </header>
 
-<div id="content">
-  <table id="candidates">
-    <tr>
-      <th>Id</th>
-      <th>电话</th>
-      <th>姓名</th>
-      <th>性别</th>
-      <th>毕业院校</th>
-      <th>专业</th>
-      <th>毕业时间</th>
-      <th>电子邮件</th>
-      <th>学位</th>
-      <th>应聘职位</th>
-      <th>消息来源</th>
-      <th>LG正确</th>
-      <th>LG答题</th>
-      <th>WL正确</th>
-      <th>WL答题</th>
-      <th>作业提交</th>
-      <th>HR面试分组</th>
-      <th>HR面试结果</th>
-      <th>小组面试分组</th>
-      <th>小组面试结果</th>
-      <th>Offer</th>
-      <th>备注</th>
-      <th colspan="4">简历链接</th>
-    </tr>
-
-    <% @candidates.each do |candidate| %>
+<div class="content">
+  <div class="data_container">
+    <table id="candidates">
       <tr>
-        <td><%= candidate.id %></td>
-        <td><%= candidate.cellphone %></td>
-        <td><%= candidate.name %></td>
-        <td><%= candidate.sex %></td>
-        <td><%= candidate.college %></td>
-        <td><%= candidate.major %></td>
-        <td><%= candidate.graduate_year %>.<%= candidate.graduate_month %></td>
-        <td><%= candidate.email %></td>
-        <td><%= candidate.degree %></td>
-        <td><%= candidate.job_title %></td>
-        <td><%= candidate.track_source %></td>
-        <td><%= candidate.lg_score %></td>
-        <td><%= candidate.lg_answered %></td>
-        <td><%= candidate.wl_score %></td>
-        <td><%= candidate.wl_answered %></td>
-        <td><%= candidate.assignment_submitted %></td>
-        <td><%= candidate.hr_interview_group %></td>
-        <td><%= candidate.hr_interview_result %></td>
-        <td><%= candidate.team_interview_group %></td>
-        <td><%= candidate.team_interview_result %></td>
-        <td><%= candidate.offer %></td>
-        <td><%= candidate.comment %></td>
-        <td><a href="<%= candidate.resume %>">Download</a></td>
-        <td><%= link_to 'Show', candidate %></td>
-        <td><%= link_to 'Edit', edit_candidate_path(candidate) %></td>
-        <td><%= link_to 'Destroy', candidate, :confirm => 'Are you sure?', :method => :delete %></td>
+        <th>Id</th>
+        <th>电话</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>毕业院校</th>
+        <th>专业</th>
+        <th>毕业时间</th>
+        <th>电子邮件</th>
+        <th>学位</th>
+        <th>应聘职位</th>
+        <th>消息来源</th>
+        <th>LG正确</th>
+        <th>LG答题</th>
+        <th>WL正确</th>
+        <th>WL答题</th>
+        <th>作业提交</th>
+        <th>HR面试分组</th>
+        <th>HR面试结果</th>
+        <th>小组面试分组</th>
+        <th>小组面试结果</th>
+        <th>Offer</th>
+        <th>备注</th>
+        <th colspan="4">简历链接</th>
       </tr>
-    <% end %>
-  </table>
+
+      <% @candidates.each do |candidate| %>
+        <tr>
+          <td><%= candidate.id %></td>
+          <td><%= candidate.cellphone %></td>
+          <td><%= candidate.name %></td>
+          <td><%= candidate.sex %></td>
+          <td><%= candidate.college %></td>
+          <td><%= candidate.major %></td>
+          <td><%= candidate.graduate_year %>.<%= candidate.graduate_month %></td>
+          <td><%= candidate.email %></td>
+          <td><%= candidate.degree %></td>
+          <td><%= candidate.job_title %></td>
+          <td><%= candidate.track_source %></td>
+          <td><%= candidate.lg_score %></td>
+          <td><%= candidate.lg_answered %></td>
+          <td><%= candidate.wl_score %></td>
+          <td><%= candidate.wl_answered %></td>
+          <td><%= candidate.assignment_submitted %></td>
+          <td><%= candidate.hr_interview_group %></td>
+          <td><%= candidate.hr_interview_result %></td>
+          <td><%= candidate.team_interview_group %></td>
+          <td><%= candidate.team_interview_result %></td>
+          <td><%= candidate.offer %></td>
+          <td><%= candidate.comment %></td>
+          <td><a href="<%= candidate.resume %>">Download</a></td>
+          <td><%= link_to 'Show', candidate %></td>
+          <td><%= link_to 'Edit', edit_candidate_path(candidate) %></td>
+          <td><%= link_to 'Destroy', candidate, :confirm => 'Are you sure?', :method => :delete %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
   <div class="actions">
     <%= link_to 'New Candidate', new_candidate_path, :class => "button" %>
   </div>
