@@ -1,3 +1,2 @@
 bundle install --system && \
-rake test && \
-rake cucumber
+rake db:drop db:create db:migrate test cucumber
